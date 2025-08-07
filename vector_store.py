@@ -3,7 +3,7 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.docstore.document import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from mindgate_chatbot_app.scrape_website import documents as website_docs
-from mindgate_chatbot_app.user_upload_handler import load_user_documents, split_documents
+from user_upload_handler import load_user_documents, split_documents
 
 def build_vector_store(user_file_paths=None):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)

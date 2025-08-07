@@ -15,7 +15,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 import google.generativeai as genai
 import google.api_core.exceptions 
 from typing import TypedDict
-from mindgate_chatbot_app.vector_store import build_vector_store 
+from vector_store import build_vector_store 
 
 genai.configure(api_key="AIzaSyDHXQN-pqTbRu2RuHBF7hBRsdKnxGdl4eo")
 generation_config = {
