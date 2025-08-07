@@ -1,7 +1,9 @@
 streamlit
 langchain
-langchain-community
 langgraph
+langchain-community
+langchain-core
+langchain-huggingface
 google-generativeai
 bs4
 requests
