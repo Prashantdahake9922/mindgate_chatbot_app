@@ -17,7 +17,9 @@ def build_vector_store(user_file_paths=None):
         user_chunks = split_documents(user_docs)
         all_chunks.extend(user_chunks)
 
-    embedding = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    # embedding = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    embedding = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2", model_kwargs={"device": "cpu"})
+
     print("user_file_paths==")
     vector_store = FAISS.from_documents(all_chunks, embedding)
     vector_store.save_local("faiss_index")
