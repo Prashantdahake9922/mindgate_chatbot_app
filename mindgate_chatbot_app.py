@@ -45,8 +45,6 @@ If the user greets you (e.g., 'hi', 'hello', 'namaste', etc.), reply politely wi
 If the user asks about your role or purpose, explain:
   - "I am an AI assistant designed to help users understand Mindgate Solutions' offerings, services, and general information."
 
-You are only allowed to answer questions about Mindgate.
-
 Always respond clearly and professionally.
 """
     ),

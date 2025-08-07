@@ -11,4 +11,4 @@ faiss-cpu
 transformers
 sentence-transformers
 docx2txt
-PyMuPDF
+pypdf
