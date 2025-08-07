@@ -15,7 +15,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 import google.generativeai as genai
 import google.api_core.exceptions 
 from typing import TypedDict
-from vector_store import build_vector_store 
+from mindgate_chatbot_app.vector_store import build_vector_store 
 
 genai.configure(api_key="AIzaSyDHXQN-pqTbRu2RuHBF7hBRsdKnxGdl4eo")
 generation_config = {
@@ -157,6 +157,7 @@ if user_input:
     st.session_state.chat_state = chatbot.invoke(st.session_state.chat_state, config=config)
 
     bot_reply = st.session_state.chat_state["response"]
+    
     st.chat_message("assistant").markdown(bot_reply)
     st.session_state.chat_history.append({"role": "assistant", "text": bot_reply})
 
